@@ -8,6 +8,7 @@ const { reply } = require('./functions.js');
 
 client.on('messageCreate', message => {
   if (message.content.toLowerCase() == "hello") reply(message, `Hello <@${message.author.id}>`);
+  if (message.content.toLowerCase() == "support") reply(message, `Click on the button to see my support`, new Discord.MessageActionRow({ components: [ new Discord.MessageButton({ label: 'Support', url: 'https://discord.gg/my super support', type: 'LINK' }) ] }));
 });
 ```
 
